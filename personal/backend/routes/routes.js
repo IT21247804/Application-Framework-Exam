@@ -19,12 +19,12 @@ router.post('/', (req, res) => {
 
 //update a workout
 router.patch('/:id', (req, res) => {
-    res.json({mssg:"get a workout by id"})
+    res.json({mssg:"update a workout by id"})
 })
 
 //delete a workout
 router.delete('/:id', (req, res) => {
-    res.json({mssg:"get a workout by id"})
+    res.json({mssg:"delete a workout by id"})
 })
 
 module.exports = router;
