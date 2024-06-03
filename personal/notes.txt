@@ -3,3 +3,11 @@ Here’s a quick breakdown of the command:
 
 npm init: This initializes a new Node.js project and creates a package.json file in your directory. The package.json file contains metadata about your project and its dependencies.
 -y: This flag automatically answers "yes" to all the prompts, setting up the project with default values.
+
+npm install express
+
+npm install nodemon
+
+npm install nodemon -g
+
+ npm install dotenv
