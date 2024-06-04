@@ -7,3 +7,4 @@ router.put('/:id/timeslot', allocateTimeslot);
 router.get('/', viewModules);
 
 module.exports = router;
+

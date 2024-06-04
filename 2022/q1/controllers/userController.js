@@ -2,7 +2,6 @@ const User = require('../models/user');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 
-// Function to register a user
 const registerUser = async (req, res) => {
     const { userName, email, password, userType, other } = req.body;
 
@@ -15,7 +14,6 @@ const registerUser = async (req, res) => {
     }
 };
 
-// Function to login a user
 const loginUser = async (req, res) => {
     const { email, password } = req.body;
 
@@ -32,7 +30,6 @@ const loginUser = async (req, res) => {
     }
 };
 
-// Function to view user profile
 const viewProfile = async (req, res) => {
     const { id } = req.params;
 
@@ -47,7 +44,6 @@ const viewProfile = async (req, res) => {
     }
 };
 
-// Function to delete a user
 const deleteUser = async (req, res) => {
     const { id } = req.params;
 

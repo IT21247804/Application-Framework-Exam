@@ -1,6 +1,5 @@
 const Module = require('../models/module');
 
-// Function to create a module
 const createModule = async (req, res) => {
     const { moduleName, duration, lecturerIds, academicYear } = req.body;
 
@@ -13,10 +12,9 @@ const createModule = async (req, res) => {
     }
 };
 
-// Function to allocate a timeslot to a module
 const allocateTimeslot = async (req, res) => {
     const { id } = req.params;
-    const { timeslot } = req.body; // timeslot should have the day and time
+    const { timeslot } = req.body;
 
     try {
         const module = await Module.findByIdAndUpdate(id, { timeslot }, { new: true });
@@ -29,7 +27,6 @@ const allocateTimeslot = async (req, res) => {
     }
 };
 
-// Function to view all modules
 const viewModules = async (req, res) => {
     try {
         const modules = await Module.find().populate('lecturerIds');

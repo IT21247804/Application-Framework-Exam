@@ -8,3 +8,4 @@ router.get('/profile/:id', viewProfile);
 router.delete('/:id', deleteUser);
 
 module.exports = router;
+

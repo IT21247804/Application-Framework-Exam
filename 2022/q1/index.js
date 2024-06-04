@@ -2,6 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const userRoutes = require('./routes/userRoutes');
 const moduleRoutes = require('./routes/moduleRoutes');
+const timetableRoutes = require('./routes/timetableRoutes');
 const { protect } = require('./middleware/authMiddleware');
 
 const app = express();
@@ -12,11 +13,7 @@ app.use(express.json());
 
 app.use('/api/users', userRoutes);
 app.use('/api/modules', moduleRoutes);
-
-// Example protected route
-app.get('/api/protected', protect, (req, res) => {
-    res.send('This is a protected route');
-});
+app.use('/api/timetables', timetableRoutes);
 
 const PORT = process.env.PORT || 5000;
 
