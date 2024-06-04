@@ -14,3 +14,5 @@ in package.json:
 "dev": "nodemon index.js"
 
  npm install dotenv
+
+ when frontend developing:  npm install cors
